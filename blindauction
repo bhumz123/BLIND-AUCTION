@@ -1,0 +1,57 @@
+# AUCTION PROGRAM
+
+import clear
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+                      
+'''
+print(logo)
+print("WELCOME TO THE AUCTION PROGRAM ")
+bids={}
+biddingfinished=False
+def findhighestbidder(biddingrecord):
+    highestbid=0
+    winner=""
+    for bidder in biddingrecord:
+        bidamount=biddingrecord[bidder]
+        if bidamount>highestbid:
+            highestbid=bidamount
+            winner=bidder
+    print(f"the winner is {winner}, with the highest bid of {highestbid}.")
+        
+    
+    
+    
+while not biddingfinished:
+    
+        name=input("What is your name?: ")
+        price=int(input(" What is your bid?: $"))
+        more=input(" are there any other bidders type 'yes' or 'no'.")
+        bids[name]=price
+
+        if more=="no":
+            biddingfinished=True
+            findhighestbidder(bids)
+        else:
+            clear()
+        
+        
+        
+        
+            
+        
+            
+        
+
+
+
